@@ -1,0 +1,105 @@
+/* General Body Styles */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Dark Theme */
+:root {
+    --primary-color: #bb86fc;
+    --primary-variant-color: #3700b3;
+    --secondary-color: #03dac6;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --error-color: #cf6679;
+    --on-primary-color: #000000;
+    --on-secondary-color: #000000;
+    --on-background-color: #e0e0e0;
+    --on-surface-color: #e0e0e0;
+    --on-error-color: #000000;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--on-background-color);
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: var(--surface-color);
+    color: var(--on-surface-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+header a {
+    color: var(--on-surface-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+header a:hover {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+}
+
+/* Button */
+.button_1 {
+    height: 38px;
+    background: var(--primary-color);
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--on-primary-color);
+}
