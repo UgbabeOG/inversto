@@ -1,7 +1,8 @@
 /* General Body Styles */
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
     background-color: #121212;
@@ -79,20 +80,6 @@ header a:hover {
     font-weight: bold;
 }
 
-/* Responsive Design */
-@media(max-width: 768px){
-    header #branding,
-    header nav,
-    header nav li{
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    header {
-        padding-bottom: 20px;
-    }
-}
 
 /* Button */
 .button_1 {
@@ -104,82 +91,80 @@ header a:hover {
     color: var(--on-primary-color);
 }
 
-/* Container for images */
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center images horizontally */
-  align-items: center; /* Center images vertically if they don't fill the container */
-  gap: 10px; /* Space between images */
+/* About Us Section Styles */
+.about-us {
+    padding: 80px 0;
 }
 
-/* Container for individual images */
-.image-container {
-  flex: 1 1 calc(50% - 20px); /* Each image container takes up about 50% of the width minus margin */
-  max-width: 300px; /* Maximum width of each image container */
-  margin: 10px; /* Space around each image container */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+.about-content {
+    padding-left: 30px;
 }
 
-/* Style for images */
-.image-container img {
-  width: 100%; /* Make image take up the full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border: 2px solid #ccc; /* Border around images */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+.about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-/* Hover effect for images */
-.image-container img:hover {
-  transform: scale(1.05); /* Slightly zoom image on hover */
-  border-color: #333; /* Change border color on hover */
+.about-content .about-body p {
+    font-size: 18px;
+    line-height: 1.8;
 }
+
+.about-list-item ul {
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.about-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.about-image {
+    flex: 1 1 300px; /* Make images flexible and set a base size */
+    max-width: 100%; /* Ensure images don't overflow their container */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+    .about-us .row {
+        flex-direction: column;
+    }
+
+    .about-content {
+        padding-left: 0;
+        margin-top: 30px;
+        text-align: center; /* Center the text for a better look */
+    }
+    .about-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image {
+        max-width: 80%; 
+    }
+}
+
 @media (max-width: 768px) {
-  .image-container {
-    flex: 1 1 100%; /* Stack images vertically on small screens */
+  header #branding,
+  header nav,
+  header nav li{
+      float: none;
+      text-align: center;
+      width: 100%;
   }
-}
 
-/* Container for images */
-.image-grid2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center images horizontally */
-  align-items: center; /* Center images vertically if they don't fill the container */
-  gap: 10px; /* Space between images */
-}
-
-/* Container for individual images */
-.image-container2 {
-  flex: 1 1 calc(50% - 20px); /* Each image container takes up about 50% of the width minus margin */
-  max-width: 300px; /* Maximum width of each image container */
-  margin: 10px; /* Space around each image container */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-/* Style for images */
-.image-container2 img {
-  width: 100%; /* Make image take up the full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border: 2px solid #ccc; /* Border around images */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for images */
-.image-container2 img:hover {
-  transform: scale(1.05); /* Slightly zoom image on hover */
-  border-color: #333; /* Change border color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .image-container2 {
-    flex: 1 1 100%; /* Stack images vertically on small screens */
+  header {
+      padding-bottom: 20px;
   }
 }
